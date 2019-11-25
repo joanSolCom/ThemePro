@@ -1,0 +1,71 @@
+[This]T1 [is the story {[that]T1 [tells the tale of {[how]R1-1 [Johnny the Bear]T1 [was born in the Pyrenees]R1-2}P3]R1}P1.1]R1. 
+
+[How]R1-1 [Johhny, the fearless bear]T1, [was born]R1-2.
+
+{[Today]SP1 [there are very few bears in the Pyrenees]R1}P2 {[but]SP1, [before]SP2, [large numbers]T1 [lived amongst the mountains of the range {[that]T1 [extends all the way from the Bay of Biscay to the Mediterranean Sea]R1}P3.1]R1}P3. 
+
+[Shepherds, charcoal burners, woodcutters and hunters]T1 [also lived there]R1. 
+
+[The bears]T1 [moved from one valley to another...]R1
+
+{[one day]SP1 [they]T1 [would be in the Basque Country and another in Bearn]R1}P2 {[or]SP1 [they]T1 [would travel from Catalonia to Aragon]R1}P3. 
+
+[It was not unusual on these journeys]SP1 [for a bear]T1 [to get lost or be left behind]R1.
+
+[One such bear]T1 [was once left behind and cut off in a cave in misty weather, not very far from a shepherds' hut]R1. 
+
+{[Weeks went by without]R1-1 [the mist]T1 [lifting]R1-2}P2 {[and]SP1 [the bear]T1 [didn't dare risking falling down a precipice]R1}P3. 
+
+[He]T1 [was sad, not being able to put up with the lack of company]R1. 
+
+[One morning]SP1 [he]T1 [saw {[how]R1-1 [a woman]T1 [had left the shepherds' hut to look for wood]R1-2}P1.1]R1. 
+
+[The bear]T1 [grabbed the woman and took her to his cave {[where]R1-1 [he]T1 [placed an enormous rock to block its entrance]R1-2}P1.1]R1.   
+
+[After nine months]SP1 [a little boy]T1 [was born]R1. 
+
+[[When]SP1 [the little lad]T1 [was four years old]R1]SP1 [he]T1 [asked his mother, {[Mother]SP1, [don't]R1-1 [you]T1 [want to see the world?]R1-2}P2]R1
+
+[His mother]T1 [pointed to the big rock]R1. 
+
+[The child]T1 [pushed it aside with his left hand to open the cave entrance]R1. 
+
+{[He]T1 [was only four]R1}P2 {[but]SP1 [he]T1[was a very strong bear]R1}P3.
+
+[My son]SP1, [{[if]SP1 [your father]T1 [comes back and sees {[what]R1-1 [you]T1 [have done]R1-2}P3]R1}P2]T1, [{[he]T1 [will kill us both]R1}P3.]R1
+
+[But]SP1 [the little bear]T1 [took her to the nearest village]R1. 
+
+[And]SP1 [Johnny, as the bear was called]T1, [went to school]R1. 
+
+[And]SP1 [all the children]T1 [laughed at him]R1, 
+
+[Your Daddy]T1 [is a bear]R1 ! 
+
+[Your Daddy]T1 [is a bear]R1 !
+
+[Johnny]T1 [grabbed one of them by the two legs and, using him as a big stick, gave a good hiding to all his schoolmates]R1.
+
+[And]SP1 [Johnny]T1 [said to his mother, {[[Mother]SP1, [I]T1 [am going to find out about the world]R1}P2]R1.
+
+[But]SP1, [my son]SP2, [what have]R1-1 [you]T1 [lost in the world]R1-2 ?
+
+[I]T [want to know fear]R, [[responded]R1 [Johnny]T1]SP1.	
+
+{[His mother]T1 [consulted the teacher]R1}P2 {[and]SP1 [the teacher]T1 [[told her]T1(R1: [{[I]T1['ll teach him fear]R1.}P4]R1]R1}P3
+
+[And]SP1 [he]T1 [took Johnny to a barn {[where]R1-1 [the teacher]T1 [had a big box]R1-2}P1.1]R1.
+
+[Open the box]R1, [the teacher]T1 [ordered Johnny]T1.
+
+[Johnny]T1 [obeyed]R1. 
+
+[On opening the box]SP1 [a multitude of pigeons]T1 [came out, beating their wings in the lad's face]R1. 
+
+[[The truth]T1 [was {that [Johnny]T1 [was a little surprised]R1}P1.1.		
+
+[{[Didn't]R1-1 [that]T1 [frighten you]R1-2 ?}P2]R1, [[asked]R1 [the teacher]T1]SP1.
+
+{[It]T1 [gave me a surprise]R1}P2, {[but]SP1 [it]T1 [didn't scare me]R1}P3.
+
+[And]SP1 [Johnny]T1 [left the teacher, the school and his mother and went to look for fear]R1. 

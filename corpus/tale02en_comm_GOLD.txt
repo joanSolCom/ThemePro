@@ -1,0 +1,55 @@
+[This]T1 [is the story {[that]T1 [tells the tale of Johnny the Bear with his big club]R1}P1.1]R1.
+
+[Johnny the Bear]T1 [goes out into the world with his big club]R1.
+
+[Johnny the Bear]T1 [wanted to know fear]R1. 
+
+{[He]T1 [was always fighting with his schoolmates]R1}P2 {[and]SP1 [nobody could stand]R1 [him]T1}P3.	
+
+{[{[I]T1 [want to know fear!]R1}P2.1]R1, [he]T1 [told his mother]R1}P2 {[and]SP1 [he]T1 [said the same to his teacher]R1}P3; 
+
+[I]T1 [want to know fear!]R1.
+
+[Then one fine day]SP1, [seeing that {[Johnny]T1 [had not been born for reading books]R1}P2]SP2, [his teacher]T1 [[said to him]T1, [[Take this club]R1, [Johnny]SP1]R1]R1. 
+
+[It]T1 [will be useful for you in the big wide world]R1.
+
+[It]T1 [was a fine club, {[the shaft of which]T1 [was made of the wood from a holly bush]R1}P1.1]R1. 
+
+[But]SP [Johnny]T1 [broke it in half {[as if]SP1 [it]T1 [were a twig]R1}P1.1]R1.
+
+[I]T1[need a club made of iron]R1.
+
+[And]SP1 [the teacher]T1 [[asked the blacksmith]T1 [to forge a club of iron]R1]R1. 
+
+[{[When]SP1[the teacher]T1[gave Johnny the iron club as a present]R1}P2]T1, [{[he]T1 [broke it in half {[as if]SP1 [it]T1 [were a twig]R1}P3.1]R1}P3]R1.
+
+[This club]T1 [isn't any good for going out into world either!]R1
+
+[And seeing this]SP1, [[the teacher]T1 [said]R1]SP2, [You go to the blacksmith yourself and ask him to make you a club {[that]T1 [you want]R1}P1.1]R1]R1
+
+[I]T1 ['ll pay for it]R1.
+
+[Johnny]T1 [went to the blacksmith's forge and began to pick up all the metal shavings on the floor]R1. 
+
+[He]T1 [made a huge pile of scrap and asked the blacksmith to melt it]R1. 
+
+[And]SP1 [that]T1 [was {[how]R1-1 [Johnny]T1 [got the club {[he desired]R1}P1.1.1, a club made of iron and weighing a hundredweight]R1-2}P1.1]R1. 
+
+{[He]T1 [said goodbye to his mother]R1}P2, {[he]T1 [bade farewell to his teacher]R1}P3 {[and]SP1 [he]T1 [wished the blacksmith all the best]R1}P4. 
+
+[And]SP1 [[his schoolmates]T1, [seeing that {[he]T1 [was leaving]R1}P2]SP1, [started to chant]R1]SP1, [{[Your Daddy]T1 [is a bear]R1}P3]R1! 
+
+[Your Daddy]T1 [is a bear]R1!
+
+{[Johnny]T1 [entered the wood]R1}P2 {[and]SP1 [there]SP2 [he]T1 [saw a woodcutter cutting down a beech tree]R1}P3.
+
+[What do you want]R1-1 [that tree]T1 [for?]R1-2
+
+[My mother]T1 [[asked me]T1 [to find some firewood]R1]R1, [[replied]R1 [the woodcutter]T1]SP1.
+
+[Johnny]T1 [saw the woodcutter give the final blow with the axe, let the tree fall on his shoulder and carry it home]R1. 
+
+{[Johnny]T1 [was amazed at the strength of this man]R1}P2 {[and]SP1 [[he]T1 [thought]R1]SP2, [The world]T1 [is full of people like me!]R1}P3
+
+[And]SP1 [after {[the woodcutter]T1 [left the tree at his mother's house]R1}P2]SP2, [Johnny and his new friend]T1 [went off to travel round the world]R1.   

@@ -1,0 +1,73 @@
+[This]T1 [is the story that tells the tale of Johnny the Bear and the Castle of Torments]R1. 
+
+[Johhny the Bear and the Castle of Torments]R1. 
+
+[Johnny]T1 [sallied out {[to look for fear and made friends with a woodcutter]R1}P1.1]R1. 
+
+[Johnny and his mate]T1 [walked and walked and, in the end, found a man, who was standing at the door of a flourmill]R1. 
+
+[The man]T1 [had a millwheel on his finger, like a ring, and was amusing himself spinning it round and round his finger]R1. 
+
+[Seeing this, Johnny and his mate {[the woodcutter]T1 [said, The world is full of people like us]R1!]R1}P1.1 
+
+{[Where]SP1 [are [you]T1 going, [the miller]T1 asked them]R1. 
+
+{[To [find and know fear]R1}P1.1, [they]T1 replied]R1. 
+
+{Me too [I]T1 ['d [like to know fear]R1}P1.1, said the miller]R1. 
+
+{[Come with us]R1}P1.1, [then]SP1, [they]T1 [told him]R1. 
+
+And [so]SP1 [the three]T1 [went off {[to meet fear in the world]R1}P1.1]R1. 
+
+[They]T1 [came to a castle]R1. 
+
+[Nobody]T1 [was there, but there was plenty of food in the kitchen]R1. 
+
+[There were also weapons]R1. 
+
+[They]T1 [tossed a coin {[to see who would do the cooking and the others went off to hunt]R1.]R1}P1.1 
+
+[The woodcutter]T1 [had {[to cook]R1}P1.1]R1. 
+
+[The woodcutter]T1 [stayed behind {[to make the dinner and Johnny]R1}P1.1 and the miller went off hunting]R1. 
+
+[Shortly after]SP1, [an old man]T1 [came to the castle gates]R1. 
+
+[He]T1 [was dressed in poor clothes and he asked for something to eat]R1. 
+
+[The woodcutter]T1 [told him {[that]SP1 [he]T1 [had a lot of work to do and could n't give him anything]R1}P1.1]R1. 
+
+[So]SP1 [the old beggar]T1 [gave the miller a jolly good hiding and left him lying on his bed with pains all over his body]R1. 
+
+{[When]SP1 [Johnny and the miller]T1 [arrived back]R1}P2, [the woodcutter]T1 told them, My body hurts all over!]R1
+
+{[But]SP1, [what]T1 [happened to you?]R1}P2, [they]T1 asked him]R1. 
+
+{[My body]T1 [hurts all over]R1}P1.1!, [he]T1 repeated]R1. 
+
+{[Don't [worry I 'll make dinner]R1}P1.1, said Johnny the Bear]R1. 
+
+[Johnny]T1 [made {[the dinner and the three]T1 [sat down to eat]R1}P1.1]R1. 
+
+[And]SP1 [the woodcutter]T1 [got better]R1. 
+
+[The next day]SP1 [They]T1 [tossed a coin {[to see who would stay behind to cook while the others went off to hunt]R1}P1.2]R1. 
+
+[It]T1 [was the miller who had to stay behind]R1. 
+
+[After a while hunting]SP1, [the woodcutter]T1 [said to Johnny, {Let's go back to the castle]R1}P1.1]R1. 
+
+{[When]SP1 [they]T1 [got back]R1}P1.1, [the miller]T1 [was lying on the bed]R1. 
+
+[My body]T1 [hurts all over!]R1
+
+{[But]SP1, [what]T1 [happened to you ?]R1}P1.1, [they]T1 asked him]R1. 
+
+{[My body]T1 [hurts all over]R1}P1.1!, [he]T1 repeated]R1. 
+
+[The next day]SP1 [it]T1 [was Johnny {[who]T1 [stayed behind to cook]R1}P1.1]R1. 
+
+[{[[Cooking and thinking,]R1}P2]T1 [because]SP1 [he]T1 [was sure there was something very fishy about all this]R1]R1}P3]R1. 
+
+[He]T1 [thought and thought how to overcome the torments]R1. 
