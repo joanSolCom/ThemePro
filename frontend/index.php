@@ -1,5 +1,5 @@
 <?php require "header.php" ?>
- 	  
+
   	  <div id="textAreaWrapper">
 	  	  <div>
 		  	<textarea id="inputBox" class="md-textarea" placeholder="Write something here..."></textarea>
@@ -26,10 +26,7 @@
 		  <li id="coref" class="nav-item pill-4">
 		  		<a class="btn btn-large btn-sample" data-toggle="pill" href="#menu3">Coref Chains</a>
 		  </li>
-		  <li id="facts" class="nav-item pill-5">
-		  		<a class="btn btn-large btn-sample" data-toggle="pill" href="#menu4">Arguments</a>
-		  </li>
-		
+	
 		</ul>
 	</div>
 

@@ -5,7 +5,10 @@ var networkCoref;
 
 $(document).ready(function(){
 
-	$.ajaxSetup({async: false});  
+    $.ajaxSetup({
+        async:false
+    }); 
+
   	manageOnOffSwitch();
   	manageSubmitButton();
   	manageNextPrevButtons();
@@ -54,20 +57,20 @@ function manageSubmitButton()
 
 	  	var text =  $('textarea#inputBox').val();
 	  	var data = {"text": text};
-
-	    $.post( "http://localhost:5000/getConll", data ,function( dataJSON ) {
+        console.log(data)
+	    $.post( "http://127.0.0.1:5000/getConll", data ,function( dataJSON ) {
 		    displayTree(dataJSON, 0);
 		    displayCorefs(dataJSON);
 		    globalDATA = dataJSON;
 		}, "json");
 
-		$.post( "http://localhost:5000/getThematicity", function( dataJSON ) {
+		$.post( "http://127.0.0.1:5000/getThematicity", function( dataJSON ) {
 		    displayThem(dataJSON);
    		    displayArguments(dataJSON);
 
 		}, "json");
 
-		$.post( "http://localhost:5000/getThematicProgression", function( dataJSON ) {
+		$.post( "http://127.0.0.1:5000/getThematicProgression", function( dataJSON ) {
 		    displayThematicProgression(dataJSON);
 		}, "json");
 		
