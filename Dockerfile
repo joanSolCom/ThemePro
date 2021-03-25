@@ -10,7 +10,6 @@ RUN pip3 install -U spacy==2.3.1
 RUN pip3 install numpy scipy flask flask-jsonpify gensim
 RUN python3 -m spacy download en_core_web_lg-2.3.1 --direct
 
-#NEURALCOREF
 RUN git clone https://github.com/huggingface/neuralcoref.git
 RUN cd neuralcoref && pip3 install -r requirements.txt && pip3 install -e .
 
@@ -22,5 +21,6 @@ RUN cd ThemePro/frontend/ && mkdir /var/www/html/themePro/ && cp -R * /var/www/h
 RUN pip3 install sklearn
 RUN pip3 install flask_cors
 RUN pip3 install python-Levenshtein
-RUN apachectl start
-CMD cd ThemePro/backend/ && python3 themazo.py
+ADD launch.sh launch.sh
+RUN chmod 0755 launch.sh
+CMD ./launch.sh
