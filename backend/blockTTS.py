@@ -6,12 +6,13 @@ class BlockTTS():
 
     def __init__(self, corefs, iT, model, sents):
         self.corefs = corefs
+        print(corefs)
         self.iT = iT
         self.embeddings = Embeddings(model)
         self.sents = sents
         self.them = self.getThem(iT.levels)
-        self.maxchars = 300
-        self.thresh = 0.3
+        self.maxchars = 420
+        self.thresh = 0.6
         self.buildBlocks()
 
     
@@ -79,6 +80,7 @@ class BlockTTS():
             if len(tokens) > 1:
                 vectorRl = self.embeddings.getMsgVector(lastThem["R1"])
                 
+                
         if vectorTc and vectorTl:
             sim = self.embeddings.distance(vectorTc, vectorTl)
             print(currentThem["T1"],"|||",lastThem["T1"], sim)
@@ -93,8 +95,16 @@ class BlockTTS():
         
         return False
 
+    def string_match(self, lastThem, currentThem):
+        if currentThem["T1"] in lastThem["fullsent"]:
+            return True
+
+        return False
+
     def need_to_merge(self, lastThem, currentThem):
-        if self.check_corefs(lastThem, currentThem):
+        if self.string_match(lastThem, currentThem):
+            return True
+        elif self.check_corefs(lastThem, currentThem):
             return True
         elif self.check_sim(lastThem, currentThem):
             return True

@@ -27,7 +27,7 @@ def load_spacy():
 
 def load_embeddings():
     print("loading embeddings")
-    model = gensim.models.KeyedVectors.load_word2vec_format('./embeddings/glove_word2vec.bin.gz', binary=True)
+    model = gensim.models.KeyedVectors.load_word2vec_format('./embeddings/google.bin.gz', binary=True)
     print("loaded")
     return model
 
@@ -41,11 +41,12 @@ def process(text):
     textConll = ""
     sents = []
     for sent in doc.sents:
+        print(sent)
         s = []
         sentConll = ""
         for token in sent:
             if token.text.strip():
-                s.append(token.text.lower())
+                s.append(token.text)
                 lineConll = str(token.i - sent.start + 1)+"\t"+token.text+"\t"+token.lemma_+"\t"+token.tag_+"\t"+token.dep_+"\t"+str(token.head.i - sent.start + 1)+"\n"
                 sentConll+=lineConll
 
