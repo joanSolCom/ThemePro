@@ -259,11 +259,6 @@ class ThemParser:
 
 			root, endsent = self.propAnalyze(sentence)
 
-
-			print("################")
-			print(sentCount)
-			print("\n")
-
 			iTree = SyntacticTreeOperations(sentence.raw_sentence)
 
 			typeStr = self.get_type_struc(iTree)
@@ -298,21 +293,17 @@ class ThemParser:
 			#print(typeStr_sort)
 			if typeStr_sort:
 				for d in typeStr_sort:
-					print(d)
 					# Causal sentence. Missing particle
 					if d[0] == "CAUSE":
-						print("Causal sentence found")
+						#print("Causal sentence found")
 
 						arrayL1 = self.annot_L1_prop(sentence, iTree, d[1][1], root, d[1][0])
 						for l in arrayL1:
 							array4sent.append(l)
 
-						#print(typeStr)
-						print(sentence)
-						#print(array4sent)
 					# Coordination
 					elif d[0] == "COORD":
-						print("Coordination found")
+						#print("Coordination found")
 
 						for item in d[1]:
 							coordV = item[1]
@@ -321,14 +312,14 @@ class ThemParser:
 							for l in arrayL1:
 								#print(l)
 								array4sent.append(l)
-						print(sentence)
 					# Subordination
 					elif d[0] == "SUBORD" or d[0] == "REL":
+						'''
 						if d[0] == "REL":
 							print("Relative clause found")
 						else:
 							print("Subordinated clause found")
-
+						'''
 						# Level 1 them
 						array4level = self.thematicity(sentence, iTree, int(root.id), endsent)
 						array4sent.append(array4level)
@@ -339,20 +330,19 @@ class ThemParser:
 
 							for a in arrayL2:
 								array4sent.append(a)
-						print(sentence)
 			else:
-				print("SIMPLE")
+				#print("SIMPLE")
 				# Level 1 them
 				array4level = self.thematicity(sentence, iTree, int(root.id), endsent)
 				array4sent.append(array4level)
 
-			print(sentence)
 
 			array4web.append(array4sent)
 			self.conll += str(sentence) + "\n"
 
 		self.levels = array4web
 
+		#print("ARRAY FOR WEB")
 		#print(array4web)
 
 '''

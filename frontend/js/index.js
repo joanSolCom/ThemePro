@@ -39,7 +39,6 @@ function manageNextPrevButtons()
 
 function manageSubmitButton()
 {
-
 	$("#submitButton").click(function(){
 
 		$("#pillWrapper").show();
@@ -58,24 +57,79 @@ function manageSubmitButton()
 	  	var text =  $('textarea#inputBox').val();
 	  	var data = {"text": text};
         console.log(data)
-	    $.post( "http://172.17.0.2:5000/getConll", data ,function( dataJSON ) {
+	    $.post( "http://192.168.1.51:5000/getConll", data ,function( dataJSON ) {
 		    displayTree(dataJSON, 0);
 		    displayCorefs(dataJSON);
 		    globalDATA = dataJSON;
 		}, "json");
 
-		$.post( "http://172.17.0.2:5000/getThematicity", function( dataJSON ) {
+		$.post( "http://192.168.1.51:5000/getThematicity", function( dataJSON ) {
 		    displayThem(dataJSON);
    		    displayArguments(dataJSON);
 
 		}, "json");
 
-		$.post( "http://172.17.0.2:5000/getThematicProgression", function( dataJSON ) {
+		$.post( "http://192.168.1.51:5000/getThematicProgression", function( dataJSON ) {
 		    displayThematicProgression(dataJSON);
+		}, "json");
+
+		$.post( "http://192.168.1.51:5000/getBlocks", function( dataJSON ) {
+		    displayBlocks(dataJSON);
 		}, "json");
 		
 		$("#myonoffswitch").prop("checked",false);
   	});
+}
+
+function getWav(text, i)
+{
+	console.log(i);
+
+	fetch('http://localhost:5002/api/tts?text=' + encodeURIComponent(text), {cache: 'no-cache'}).then(function(res) {
+			if (!res.ok) throw Error(res.statusText)
+				return res.blob()
+			}).then(function(blob) {
+				let url = URL.createObjectURL(blob);
+				$("#ttsContainer #block_"+i).append("<audio controls src="+url+"></audio>");
+				$("#synth_"+i).hide();
+			});
+
+}
+
+function displayBlocks(dataJSON)
+{
+	var obj = $.parseJSON(dataJSON);
+	$("#ttsContainer").html();
+	let idBlock = 1;
+	for(var p = 0; p<obj["blocks"].length; p++)
+	{
+		var block = obj["blocks"][p];
+		let blockStr = "";
+		$("#ttsContainer").append("<div class='block' id='block_"+idBlock+"'></div>");
+		$("#ttsContainer #block_"+idBlock).append("<b>Block "+idBlock+"</b>");
+		$("#ttsContainer #block_"+idBlock).append("<ol></ol>");
+
+		for(var q = 0; q<block.length; q++)
+		{
+			let text = block[q];
+			blockStr += text + " ";
+			$("#ttsContainer #block_"+idBlock+" ol").append("<li>"+text+"</li>");
+		}
+		
+		$("#ttsContainer #block_"+idBlock).append("<button id=synth_"+idBlock+" class='synthesize btn btn-primary'>Synthesize</button>")
+		idBlock++;
+
+	}
+
+	$(".synthesize").click(function()
+	{
+		let id = $(this).attr('id');
+		id = id.replace("synth_","")
+		let blockStr = $(this).parent().find("ol li").text();
+		console.log(id, blockStr);
+		getWav(blockStr, id);
+		
+	});
 }
 
 function displayArguments(dataJSON)
@@ -83,6 +137,8 @@ function displayArguments(dataJSON)
 	var obj = $.parseJSON(dataJSON);
 	var arguments = [];
 	$("#argumentContainer").html();
+	$("#argumentContainer").append("<ol>");
+
 	for(var p = 0; p<obj["sentences"].length; p++)
 	{
 		var sentence = obj["sentences"][p]["text"];
@@ -120,7 +176,6 @@ function displayArguments(dataJSON)
 					lemmaTheme = tokens[from].toLowerCase();
 					if(posTheme == "PRP" && ($.inArray(lemmaTheme, pronList) != -1))
 					{
-						console.log("FALSE");
 						themNotPron = false;
 					}
 				}

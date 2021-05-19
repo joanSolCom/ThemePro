@@ -191,6 +191,9 @@ textarea {
 	display:none;
 }
 
+.block{
+  border: 1px solid #C00;
+}
 
 #wrapperButtons{
 	margin-bottom: 20px;

@@ -58,12 +58,9 @@ class ThematicProgression():
             dRheme = -1
             dHyper = -1
 			
-            print(theme, previousThemeStr, pron)
-
             if theme:
                 if previousTheme:
                     if previousPron:
-                        print("IM HERE", theme, previousThemeStr)
                         dHyper = -10
                         dTheme = -10
                         if self.isCoref(theme, previousThemeStr):
@@ -73,7 +70,6 @@ class ThematicProgression():
                             dTheme = self.embeddings.distance(themeVector, previousTheme)[0][0]
                             dHyper = self.embeddings.distance(themeVector, hyperThemeVector)[0][0]
                         else:
-                            print("IM HERE", theme, previousThemeStr)
                             dHyper = -10
                             dTheme = -10
                             if self.isCoref(theme, previousThemeStr):

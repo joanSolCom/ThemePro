@@ -10,6 +10,7 @@ import neuralcoref
 import gensim
 from flask import g
 from flask_cors import CORS
+from blockTTS import BlockTTS
 
 app = Flask(__name__)
 CORS(app)
@@ -35,20 +36,23 @@ model = load_embeddings()
 
 def process(text):
     text = text.replace("  "," ")
-    print(text)
     doc = en_nlp(text)
 
     textConll = ""
+    sents = []
     for sent in doc.sents:
         s = []
         sentConll = ""
         for token in sent:
             if token.text.strip():
-                s.append(token.text)
+                s.append(token.text.lower())
                 lineConll = str(token.i - sent.start + 1)+"\t"+token.text+"\t"+token.lemma_+"\t"+token.tag_+"\t"+token.dep_+"\t"+str(token.head.i - sent.start + 1)+"\n"
                 sentConll+=lineConll
 
+        sents.append(s)
         textConll+=sentConll+"\n"
+
+    cache["sentences"] = sents
 
     sentences = textConll.strip().split("\n\n")
     dictJson = {}
@@ -93,7 +97,6 @@ def getThematicity():
 	cache["iT"] = iT
 
 	levels = iT.levels
-	print("LEVELSSSS",levels, len(levels))
 	sentences = cache["conll"].strip().split("\n\n")
 	dictJson = {}
 	dictJson["sentences"] = []
@@ -128,6 +131,14 @@ def getThematicProgression():
 	dictJSON["hypernode"] = iTP.hypernode
 	jsonStr = json.dumps(dictJSON)
 	return jsonify(jsonStr)
+
+@app.route('/getBlocks', methods=['POST'])
+def getBlocks():
+    iB = BlockTTS(cache["corefs"], cache["iT"], model, cache["sentences"])
+    dictJSON = {}
+    dictJSON["blocks"] = iB.blocks
+    jsonStr = json.dumps(dictJSON)
+    return jsonify(jsonStr)
 
 
 if __name__ == '__main__':

@@ -1,22 +1,35 @@
 # ThemePro
 
-Code that was developed for the demo of ThemePro.
-This assumes you have a MySQL database called Embeddings with the word embeddings you want to use.
-Each table is a set of embeddings with the following fields
-word (varchar 255 primary key) dim1 dim2 dim3 .... dimN (decimal (10,8))
+Code that was developed for the demo of ThemePro. Please cite this paper if you use this tool for a scientific publication:
 
-backend and frontend are in their own folder.
+Dominguez, M., Soler, J., & Wanner, L. (2020, May). ThemePro: A Toolkit for the Analysis of Thematic Progression. In Proceedings of The 12th Language Resources and Evaluation Conference (pp. 1000-1007).
 
-The requirements for the backend:
-python3
-flask
-spacy with model en_core_web_sm
-neuralcoref
-pymysql
-sklearn
-scipy
+To run the demo, you will need a working Docker installation.
 
-The requirements for the frontend
-php
+1) Build the docker with the following command (from the same directory where the Dockerfile is):
 
-Upon acceptance, we will release a Docker container which the setup of the demo
+```
+sudo docker build .
+```
+
+After building (it takes around 10-15 mins depending on your internet connection, so sit tight or go grab some coffee), you will see the following terminal output:
+
+```
+Step 22/22 : CMD ./launch.sh
+ ---> Running in 304891c51eea
+Removing intermediate container 304891c51eea
+ ---> <DOCKER_ID>
+Successfully built <DOCKER_ID>
+```
+Copy the DOCKER_ID, since you will need to input it in the following command.
+
+2) Run it:
+```
+sudo docker run -p 4000:80 <DOCKER_ID>
+```
+
+3) Play with the demo! Access the demo using a browser and accessing:
+
+```
+http://localhost:4000/themePro/
+```

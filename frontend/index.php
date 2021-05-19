@@ -26,6 +26,9 @@
 		  <li id="coref" class="nav-item pill-4">
 		  		<a class="btn btn-large btn-sample" data-toggle="pill" href="#menu3">Coref Chains</a>
 		  </li>
+		  <li id="tts" class="nav-item pill-5">
+		  		<a class="btn btn-large btn-sample" data-toggle="pill" href="#menu4">ThemBlock TTS</a>
+		  </li>
 	
 		</ul>
 	</div>
@@ -54,12 +57,12 @@
 		  	<div id="corefContainer" class="result">
 		  	</div>
 	  </div>
-	  <!--
+	  
 	  <div class="tab-pane container" id="menu4">
-		  	<div id="argumentContainer" class="result">
+		  	<div id="ttsContainer" class="result">
 		  	</div>
 	  </div>
-	  --!>
+	  
 	</div>
 
 
