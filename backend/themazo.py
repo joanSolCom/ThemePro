@@ -94,34 +94,35 @@ def getConll():
 
 @app.route("/getThematicity" , methods=['POST'])
 def getThematicity():
-	iT = ThemParser(raw_conll=cache["conll"])
-	cache["iT"] = iT
+    iT = ThemParser(raw_conll=cache["conll"])
+    cache["iT"] = iT
 
-	levels = iT.levels
-	sentences = cache["conll"].strip().split("\n\n")
-	dictJson = {}
-	dictJson["sentences"] = []
+    levels = iT.levels
+    sentences = cache["conll"].strip().split("\n\n")
+    dictJson = {}
+    dictJson["sentences"] = []
 
-	for idS, sentence in enumerate(sentences):
-		dictS = {}
-		dictS["text"] = ""
-		dictS["tokens"] = []
-		dictS["pos"] = []
-		dictS["components"] = []
-		for token in sentence.split("\n"):
-			tokenComponents = token.split("\t")
-			if len(tokenComponents) > 1:
-				dictS["text"] += tokenComponents[1] + " "
-				dictS["tokens"].append(tokenComponents[1])
-				dictS["pos"].append(tokenComponents[3])
+    for idS, sentence in enumerate(sentences):
+        dictS = {}
+        dictS["text"] = ""
+        dictS["tokens"] = []
+        dictS["pos"] = []
+        dictS["components"] = []
+        for token in sentence.split("\n"):
+            tokenComponents = token.split("\t")
+            if len(tokenComponents) > 1:
+                dictS["text"] += tokenComponents[1] + " "
+                dictS["tokens"].append(tokenComponents[1])
+                dictS["pos"].append(tokenComponents[3])
 
-		dictS["text"] = dictS["text"].strip()
-		if levels:
-			dictS["components"] = levels[idS]	
-		dictJson["sentences"].append(dictS)
+        dictS["text"] = dictS["text"].strip()
+        if levels:
+            dictS["components"] = levels[idS]
 
-	jsonStr = json.dumps(dictJson)
-	return jsonify(jsonStr)
+        dictJson["sentences"].append(dictS)
+
+    jsonStr = json.dumps(dictJson)
+    return jsonify(jsonStr)
 
 @app.route('/getThematicProgression', methods=["POST"])
 def getThematicProgression():

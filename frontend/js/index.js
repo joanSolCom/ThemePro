@@ -69,9 +69,10 @@ function manageSubmitButton()
 
 		}, "json");
 
+		/*
 		$.post( "http://192.168.1.51:5000/getThematicProgression", function( dataJSON ) {
 		    displayThematicProgression(dataJSON);
-		}, "json");
+		}, "json");*/
 
 		$.post( "http://192.168.1.51:5000/getBlocks", function( dataJSON ) {
 		    displayBlocks(dataJSON);
@@ -85,7 +86,7 @@ function getWav(text, i)
 {
 	console.log(i);
 
-	fetch('http://localhost:5002/api/tts?text=' + encodeURIComponent(text), {cache: 'no-cache'}).then(function(res) {
+	fetch('http://192.168.1.51:5002/api/tts?text=' + encodeURIComponent(text), {cache: 'no-cache'}).then(function(res) {
 			if (!res.ok) throw Error(res.statusText)
 				return res.blob()
 			}).then(function(blob) {
@@ -112,11 +113,11 @@ function displayBlocks(dataJSON)
 		for(var q = 0; q<block.length; q++)
 		{
 			let text = block[q];
-			blockStr += text + " ";
+			blockStr += text + " .";
 			$("#ttsContainer #block_"+idBlock+" ol").append("<li>"+text+"</li>");
 		}
 		
-		$("#ttsContainer #block_"+idBlock).append("<button id=synth_"+idBlock+" class='synthesize btn btn-primary'>Synthesize</button>")
+		$("#ttsContainer #block_"+idBlock).append("<button id=synth_"+idBlock+" class='synthesize glow-on-hover'>Synth</button>")
 		idBlock++;
 
 	}
@@ -533,7 +534,7 @@ function displayThem(dataJSON)
 
 		$( "#themContainer" ).append("<br/><br/><h4>Sentence Number "+(p+1)+"</h3><span id='sent_"+p+"'></span>");
 		
-		$(currentSentSelector).append("<span id='ann_in'><span class='proposition badge badge-pill badge-secondary'>"+sentence+"</span></span><br/>");
+		//$(currentSentSelector).append("<span id='ann_in'>"+sentence+"</span><br/>");
 
 		for (var j = 0; j < them.length; j++) 
 		{
@@ -552,21 +553,21 @@ function displayThem(dataJSON)
 				var toPrepend;
 				//console.log(from, to, label);
 
-				if(label[0] == "P")
+				/*if(label[0] == "P")
 				{
 					toPrepend = "<span class='proposition badge badge-pill badge-secondary'>";
-				}
-				else if(label[0] == "R")
+				}*/
+				if(label[0] == "R")
 				{
-					toPrepend = "<span class='rheme badge badge-pill badge-info'>";
+					toPrepend = "<span class='rheme badge badge-pill badge-light'>";
 				}
 				else if(label[0] == "S")
 				{
-					toPrepend = "<span class='specifier badge badge-pill badge-success'>";
+					toPrepend = "<span class='specifier badge badge-pill badge-light'>";
 				}
 				else
 				{
-					toPrepend = "<span class='theme badge badge-pill badge-primary'>";
+					toPrepend = "<span class='theme badge badge-pill badge-warning'>";
 				}
 
 				sentenceArray[from+1] = toPrepend + sentenceArray[from+1];
@@ -576,7 +577,7 @@ function displayThem(dataJSON)
 			}
 			sentenceArray.push("</span><br/>");
 			$(currentSentSelector).append(sentenceArray.join(" "))
-
+			break;
 		}
 		$(currentSentSelector).append("<br/>");
 	}

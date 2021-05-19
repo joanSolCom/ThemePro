@@ -20,14 +20,16 @@
 		  		<a class="btn btn-large btn-sample" data-toggle="pill" href="#menu1">Thematicity</a>
 		  </li>
 
+		  <!--
 		  <li id="them" class="nav-item pill-3">
 		  		<a class="btn btn-large btn-sample" data-toggle="pill" href="#menu2">Thematic Progression</a>
 		  </li>
+			-->
 		  <li id="coref" class="nav-item pill-4">
 		  		<a class="btn btn-large btn-sample" data-toggle="pill" href="#menu3">Coref Chains</a>
 		  </li>
 		  <li id="tts" class="nav-item pill-5">
-		  		<a class="btn btn-large btn-sample" data-toggle="pill" href="#menu4">ThemBlock TTS</a>
+		  		<a class="btn btn-large btn-sample" data-toggle="pill" href="#menu4">ThemePro TTS</a>
 		  </li>
 	
 		</ul>
@@ -49,10 +51,13 @@
 		  	</div>
 	  </div>
 
+	  <!--
 	  <div class="tab-pane container" id="menu2">
 		  	<div id="themProgContainer" class="result">
 		  	</div>
 	  </div>
+	  -->
+
 	  <div class="tab-pane container" id="menu3">
 		  	<div id="corefContainer" class="result">
 		  	</div>

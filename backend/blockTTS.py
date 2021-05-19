@@ -41,15 +41,15 @@ class BlockTTS():
             foundRl = False
             for corefElem in corefList:
                 if "T1" in lastThem:
-                    if corefElem in lastThem["T1"]:
+                    if corefElem in lastThem["T1"].lower():
                         foundTl = True
                         print("found in last theme", corefElem)
                 if "T1" in currentThem:
-                    if corefElem in currentThem["T1"]:
+                    if corefElem in currentThem["T1"].lower():
                         foundTc = True
                         print("found in current theme", corefElem)
                 if "R1" in lastThem:
-                    if corefElem in lastThem["R1"]:
+                    if corefElem in lastThem["R1"].lower():
                         fountRl = True
                         print("found in last rheme", corefElem)
 
@@ -96,8 +96,9 @@ class BlockTTS():
         return False
 
     def string_match(self, lastThem, currentThem):
-        if currentThem["T1"] in lastThem["fullsent"]:
-            return True
+        if "T1" in currentThem:
+            if currentThem["T1"].lower() in lastThem["fullsent"].lower():
+                return True
 
         return False
 
